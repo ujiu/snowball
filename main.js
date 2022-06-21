@@ -1,4 +1,5 @@
 import './style.css'
+// import data from './dataSource.json'
 
 function* fn(items) {
   for (let item = 1; item <= items; item++) {
@@ -38,10 +39,15 @@ function* fn(items) {
   }
 }
 
-const run = fn(125)
+const run = fn(100)
 const list = []
+
 for (let i of run) {
   list.push(i)
 }
 
-document.querySelector('#app').innerText = list.join(', ')
+console.log(list)
+
+// document.querySelector('#app').innerHTML = list
+//   .map(item => `<i title=${item} class="dotted"></i>`)
+//   .join('')
