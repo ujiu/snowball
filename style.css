@@ -1,3 +1,6 @@
+body {
+  user-select: none;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -13,4 +16,27 @@
   height: 10px;
   background-color: aqua;
   margin: 1px;
+}
+
+#coreBtn {
+  display: block;
+  width: 88px;
+  height: 88px;
+  border-radius: 44px;
+  background-color: #fff;
+  cursor: pointer;
+  position: fixed;
+  top: calc(50% - 44px);
+  left: calc(50% - 44px);
+}
+
+#coreBtn:active {
+  background-color: tomato;
+}
+
+#coreBtn:disabled {
+  font-size: 30px;
+  color: green;
+  border: 1px solid green;
+  cursor: not-allowed;
 }

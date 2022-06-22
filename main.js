@@ -39,11 +39,14 @@ function* fn(item = 1) {
 
 const run = fn(11)
 
-document.addEventListener('click', () => {
+const coreBtn = document.querySelector('#coreBtn')
+
+coreBtn.addEventListener('click', () => {
   const target = run.next()
-  if (!target.done) {
-    document.querySelector('#app').innerText = target.value
+  if (target.done) {
+    coreBtn.innerText = '✔'
+    coreBtn.disabled = true
   } else {
-    document.querySelector('#app').innerText = 'done'
+    coreBtn.innerText = target.value
   }
 })
